@@ -91,11 +91,19 @@ finalScore(inning, 9) might return:
 
 console.log("********************Task 3********************");
 
-function finalScore(/*code Here*/){
-
-  /*Code Here*/
-
+function finalScore(fun1, num1){
+  totalScore = {
+    Home: 0,
+    Away: 0,
+  }
+  for (i = 0; i < num1; i++){
+    totalScore.Home += fun1();
+    totalScore.Away += fun1();
+  }
+  return totalScore;
 }
+
+console.log(finalScore(inning, 9));
 
 /* Task 4: 
 
@@ -119,8 +127,19 @@ Final Score: awayTeam - homeTeam */
 
 console.log("********************Task 4********************");
 
-function scoreboard(/* CODE HERE */) {
-  /* CODE HERE */
+function scoreboard(fun1, fun2, num1) {
+  let score = {
+    Home: 0,
+    Away: 0,
+  }
+  for(let i = 1; i <= num1; i++){
+    let innScore = fun2(fun1, 1)
+    score.Home += innScore.Home;
+    score.Away += innScore.Away;    
+    console.log(`Inning ${i}: Home Score = ${innScore.Home} Away Score = ${innScore.Away}`)  
+  }
+  return `Final Score: Home Score = ${score.Home} Away = ${score.Away}`  
 }
 
+console.log(scoreboard(inning, finalScore, 9));
 
