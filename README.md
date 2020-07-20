@@ -43,6 +43,7 @@ Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
 
+closure is a function inside a function where one function is the parent and one is the child and the child function is only usable by the parent function
 
 2. Study the following code, then answer the questions below.
 
@@ -66,7 +67,7 @@ dansRoll();
 
 a. Where is closure used in this code? How can you tell?
 
-the first } provides closure to the function() and the second } provides closure to the function personalDice - each {} indicates a function where the open { defines the function and the closing } closes that function out which can be called upon by the other functions.  
+closure in this code is the newly created function within the parent function of personalDice - Closure is a function inside another function and the double set of {} indicates there are two seperate functions here.  
 
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
 

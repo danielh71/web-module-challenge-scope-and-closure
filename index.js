@@ -28,12 +28,18 @@ function processFirstItem(stringList, callback) {
  * 
  * 1. What is the difference between counter1 and counter2?
  * 
- * 
+ * counter1 creates a function inside another function whereas counter2 is a single function
  * 
  * 2. Which of the two uses a closure? How can you tell?
  * 
+ *  counter1 uses closure as it creates a function inside of itself which is basically the definition of closure
+ * 
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
  *
+ * counter1 allows you to create multiple variables and utilize the child function of counterMaker to create answers for seperate variables
+ * 
+ * counter2 will only allow a single return for the function 
+ * 
 */
 
 // counter1 code
@@ -61,17 +67,12 @@ and 2. */
 
 console.log("********************Task 2********************");
 
-function inning(team){
-  return function(){
-    const points = Math.floor(Math.random() * 3);
-    console.log(`${team} scored ${points}`)
-  }    
+function inning(){
+  const points = Math.floor(Math.random() * 3);
+  return points 
 }
-const redSox = inning("Red Sox");
-const yankees = inning("Yankees");
 
-redSox();
-yankees();
+console.log(inning());
 
 /* Task 3: finalScore()
 
