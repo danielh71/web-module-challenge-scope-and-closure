@@ -71,7 +71,7 @@ the first } provides closure to the function() and the second } provides closure
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
 
 The "name" Dan will always be the same as it is specifically designated as the argument to the parameter name in the function.  
-The # rolled will always be random, generally something different, as the variable invokes the functions math.floor and math.random so that it will randomly generate a number (math.random) and then round that number down to the nearest whole number (math.floor).  The math.random function will generate a random decimal number between .00 and .09 and will multiply that number by 6 prior to rounding down since that is declared in the argument for math.floor, hence the newRoll variable will randomly generate a number between 0 and 5.
+The # rolled will always be random, generally something different, as the variable invokes the functions math.floor and math.random so that it will randomly generate a number (math.random) and then round that number down to the nearest whole number (math.floor).  The math.random function will generate a random decimal number between .00 and .09 and will multiply that number by 6 prior to rounding down since that is declared in the argument for math.floor, hence the newRoll variable will randomly generate a number between 1 and 6.
 
 c. What is the lexical scope of `newRoll`? 
 
